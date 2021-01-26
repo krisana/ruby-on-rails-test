@@ -1,0 +1,17 @@
+<figure class="figure">
+  <blockquote class="blockquote">
+    <h2 class="display-6"><%= @job.title %></h2>
+    <h5><small>Company:</small> <b><span class="text-primary"><%= @job.company %></span></b></h5>
+    <p>Salary: <span class="text-success"><%= number_to_currency(@job.salary, unit: "฿", precision: 0) %></span></p>
+  </blockquote>
+</figure>
+
+<div class="mb-3">
+  <div class="d-grid gap-2 d-md-flex align-items-center justify-content-md-between">
+    <%= link_to "Show all", jobs_path, class: "btn btn-outline-secondary" %>
+    <div>
+      <%= link_to "Edit", edit_job_path(@job), class: "btn btn-outline-warning" %>
+      <%= link_to "Delete", job_path(@job), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-outline-danger" %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+<%= form_with model: job, class: "form" do |form| %>
+  <div class="mb-3">
+    <div class="form-floating">
+      <%= form.text_field :title, class: "form-control", placeholder: "Job title" %>
+      <%= form.label :title, class: "control-label" %>
+      <% job.errors.full_messages_for(:title).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+  </div>
+  <div class="mb-3">
+    <div class="form-floating">
+      <%= form.text_field :company, class: "form-control", placeholder: "Job company" %>
+      <%= form.label :company, class: "control-label" %>
+      <% job.errors.full_messages_for(:company).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+  </div>
+  <div class="mb-3">
+    <div class="form-floating">
+      <%= form.number_field :salary, class: "form-control", placeholder: "Position salary" %>
+      <%= form.label :salary, class: "control-label" %>
+      <% job.errors.full_messages_for(:salary).each do |message| %>
+        <div><%= message %></div>
+      <% end %>
+    </div>
+  </div>
+  <div class="mb-3">
+    <div class="d-grid gap-2 d-md-flex align-items-center justify-content-md-between">
+      <%= link_to "Show all", jobs_path, class: "btn btn-outline-secondary" %>
+      <%= form.submit class: "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>
