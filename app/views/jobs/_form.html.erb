@@ -1,7 +1,7 @@
 <%= form_with model: job, class: "form" do |form| %>
   <div class="mb-3">
     <div class="form-floating">
-      <%= form.text_field :title, class: "form-control", placeholder: "Job title" %>
+      <%= form.text_field :title, class: "form-control", required: "required", placeholder: "Job title" %>
       <%= form.label :title, class: "control-label" %>
       <% job.errors.full_messages_for(:title).each do |message| %>
         <div><%= message %></div>
@@ -10,7 +10,7 @@
   </div>
   <div class="mb-3">
     <div class="form-floating">
-      <%= form.text_field :company, class: "form-control", placeholder: "Job company" %>
+      <%= form.text_field :company, class: "form-control", required: "required", placeholder: "Job company" %>
       <%= form.label :company, class: "control-label" %>
       <% job.errors.full_messages_for(:company).each do |message| %>
         <div><%= message %></div>
@@ -19,7 +19,7 @@
   </div>
   <div class="mb-3">
     <div class="form-floating">
-      <%= form.number_field :salary, class: "form-control", placeholder: "Position salary" %>
+      <%= form.number_field :salary, class: "form-control", required: "required", placeholder: "Position salary" %>
       <%= form.label :salary, class: "control-label" %>
       <% job.errors.full_messages_for(:salary).each do |message| %>
         <div><%= message %></div>

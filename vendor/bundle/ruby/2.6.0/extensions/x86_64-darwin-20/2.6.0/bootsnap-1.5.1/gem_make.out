@@ -1,0 +1,15 @@
+current directory: /Users/krisana/Workspace/Tests/cotactic/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.5.1/ext/bootsnap
+/Users/krisana/.rvm/rubies/ruby-2.6.3/bin/ruby -I /Users/krisana/.rvm/rubies/ruby-2.6.3/lib/ruby/site_ruby/2.6.0 -r ./siteconf20210129-93122-15e70y8.rb extconf.rb
+creating Makefile
+
+current directory: /Users/krisana/Workspace/Tests/cotactic/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.5.1/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /Users/krisana/Workspace/Tests/cotactic/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.5.1/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/krisana/Workspace/Tests/cotactic/vendor/bundle/ruby/2.6.0/gems/bootsnap-1.5.1/ext/bootsnap
+make "DESTDIR=" install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 bootsnap.bundle ./.gem.20210129-93122-98szbz/bootsnap
